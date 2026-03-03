@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Каталог кухонь</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <div class="page__container">
+        <h1 class="page__title">Каталог кухонь</h1>
+      </div>
+    </header>
+
+    <main class="page__content">
+      <div class="page__container">
+        <section class="catalog" aria-label="Список товаров">
+          <h2 class="visually-hidden">Листинг товаров</h2>
+          <div class="catalog__grid" id="catalog-grid"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <a class="product-card__main-link" href="/card" target="_blank" rel="noopener noreferrer" aria-label="Открыть карточку товара"></a>
+
+      <div class="product-card__media">
+        <div class="product-card__slider swiper">
+          <div class="product-card__slider-wrapper swiper-wrapper"></div>
+
+          <button class="product-card__nav-button product-card__nav-button_type_prev" type="button" aria-label="Предыдущий слайд">
+            <span class="product-card__nav-icon" aria-hidden="true">&lsaquo;</span>
+          </button>
+
+          <button class="product-card__nav-button product-card__nav-button_type_next" type="button" aria-label="Следующий слайд">
+            <span class="product-card__nav-icon" aria-hidden="true">&rsaquo;</span>
+          </button>
+
+          <button class="product-card__zoom-button" type="button" aria-label="Увеличить изображение">
+            <span class="product-card__zoom-icon" aria-hidden="true">+</span>
+          </button>
+
+          <div class="product-card__pagination swiper-pagination" aria-label="Пагинация слайдера"></div>
+        </div>
+
+        <div class="product-card__description">
+          <p class="product-card__description-text"></p>
+        </div>
+      </div>
+
+      <div class="product-card__body">
+        <p class="product-card__article">
+          <span class="product-card__article-label">Артикул</span>
+          <span class="product-card__article-value"></span>
+        </p>
+
+        <h3 class="product-card__title"></h3>
+
+        <div class="product-card__options">
+          <p class="product-card__options-title">Варианты материалов</p>
+          <div class="product-card__options-list" role="list" aria-label="Варианты материалов"></div>
+        </div>
+
+        <div class="product-card__price-block">
+          <p class="product-card__price-label">Цена от</p>
+          <p class="product-card__price-value"></p>
+          <p class="product-card__price-note">
+            <span class="product-card__price-note-label">Погонный метр от</span>
+            <span class="product-card__price-note-value"></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="product-card__footer">
+        <button class="product-card__like-button" type="button" aria-pressed="false" aria-label="Добавить в избранное">
+          <span class="product-card__like-icon" aria-hidden="true">&#9829;</span>
+          <span class="product-card__like-count"></span>
+        </button>
+
+        <a class="product-card__calc-link" href="/calc" target="_blank" rel="noopener noreferrer">
+          <span>Рассчитать стоимость</span>
+          <span class="product-card__calc-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <button class="product-card__buy-button" type="button">Заказать</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
