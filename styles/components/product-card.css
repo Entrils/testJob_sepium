@@ -225,6 +225,10 @@
   transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
 }
 
+.product-card__option-button:hover {
+  background-color: #e8e8e8;
+}
+
 .product-card__option-button_state_active {
   background-color: var(--color-chip-active-bg);
   color: var(--color-chip-active-text);
@@ -278,6 +282,15 @@
   align-items: center;
   gap: 6px;
   color: #9c9c9c;
+  transition: color var(--transition-duration) ease;
+}
+
+.product-card__like-button:hover {
+  color: #727272;
+}
+
+.product-card__like-button_state_active {
+  color: var(--color-accent);
 }
 
 .product-card__like-icon {
