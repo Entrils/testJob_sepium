@@ -1,0 +1,47 @@
+﻿.page__container {
+  width: min(100% - (var(--container-padding) * 2), var(--container-width));
+  margin: 0 auto;
+}
+
+.page__header {
+  padding: 28px 0 20px;
+}
+
+.page__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.page__content {
+  padding-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  .page__header {
+    padding: 42px 0 24px;
+  }
+
+  .page__title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --container-padding: 12px;
+  }
+
+  .page__header {
+    padding: 20px 0 16px;
+  }
+
+  .page__title {
+    font-size: 1.25rem;
+  }
+
+  .page__content {
+    padding-bottom: 28px;
+  }
+}
