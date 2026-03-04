@@ -74,8 +74,10 @@
 
   function bindFancybox() {
     Fancybox.bind('[data-fancybox]', {
+      mainClass: 'catalog-fancybox',
+      caption: false,
       Images: {
-        initialSize: 'fit',
+        initialSize: 'contain',
         Panzoom: {
           maxScale: 1
         }
@@ -104,9 +106,11 @@
     }
 
     Fancybox.show(slides, {
+      mainClass: 'catalog-fancybox',
+      caption: false,
       startIndex: getInitialSlideIndex(swiperInstance),
       Images: {
-        initialSize: 'fit',
+        initialSize: 'contain',
         Panzoom: {
           maxScale: 1
         }

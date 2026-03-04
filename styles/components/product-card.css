@@ -140,6 +140,11 @@
   height: 0.5625rem;
 }
 
+.product-card__nav-icon .product-card__icon_type_arrow {
+  width: 0.875rem;
+  height: 0.625rem;
+}
+
 .product-card__icon_type_zoom {
   width: 1.125rem;
   height: 1.125rem;
