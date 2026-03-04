@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sepium test</title>
+  <meta name="description" content="Адаптивный листинг кухонь на заказ с мини-карточками, галереей изображений, модификациями материалов и расчетом стоимости.">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Sepium test">
+  <meta property="og:description" content="Адаптивный листинг кухонь на заказ с мини-карточками, слайдером изображений и интерактивными элементами.">
+  <meta property="og:image" content="./assets/kitchen.png">
+  <meta property="og:image:alt" content="Светлая кухня на заказ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sepium test">
+  <meta name="twitter:description" content="Адаптивный листинг кухонь на заказ с мини-карточками, слайдером изображений и интерактивными элементами.">
+  <meta name="twitter:image" content="./assets/kitchen.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,16 +51,26 @@
           <div class="product-card__slider-wrapper swiper-wrapper"></div>
 
           <button class="product-card__nav-button product-card__nav-button_type_prev" type="button" aria-label="Предыдущий слайд">
-            <span class="product-card__nav-icon" aria-hidden="true"></span>
+            <span class="product-card__nav-icon" aria-hidden="true">
+              <svg class="product-card__icon product-card__icon_type_arrow" viewBox="0 0 6 9">
+                <use href="./assets/sprite.svg#icon-arrow"></use>
+              </svg>
+            </span>
           </button>
 
           <button class="product-card__nav-button product-card__nav-button_type_next" type="button" aria-label="Следующий слайд">
-            <span class="product-card__nav-icon" aria-hidden="true"></span>
+            <span class="product-card__nav-icon" aria-hidden="true">
+              <svg class="product-card__icon product-card__icon_type_arrow" viewBox="0 0 6 9">
+                <use href="./assets/sprite.svg#icon-arrow"></use>
+              </svg>
+            </span>
           </button>
 
                     <button class="product-card__zoom-button" type="button" aria-label="Увеличить изображение">
             <span class="product-card__zoom-icon" aria-hidden="true">
-              <img class="product-card__zoom-image" src="./assets/zoom.svg" alt="">
+              <svg class="product-card__icon product-card__icon_type_zoom" viewBox="0 0 18 18">
+                <use href="./assets/sprite.svg#icon-zoom"></use>
+              </svg>
             </span>
           </button>
         </div>
@@ -90,18 +114,36 @@
 
         <div class="product-card__footer">
             <button class="product-card__like-button" type="button" aria-pressed="false" aria-label="Добавить в избранное">
-              <span class="product-card__like-icon" aria-hidden="true"></span>
+              <span class="product-card__like-icon" aria-hidden="true">
+                <svg class="product-card__icon product-card__icon_type_like" viewBox="0 0 17 15">
+                  <use href="./assets/sprite.svg#icon-like"></use>
+                </svg>
+              </span>
               <span class="product-card__like-count"></span>
             </button>
 
             <a class="product-card__calc-link" href="/calc" target="_blank" rel="noopener noreferrer">
               <span>Рассчитать стоимость</span>
-              <span class="product-card__calc-arrow" aria-hidden="true"></span>
+              <span class="product-card__calc-arrow" aria-hidden="true">
+                <svg class="product-card__icon product-card__icon_type_arrow" viewBox="0 0 6 9">
+                  <use href="./assets/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
             </a>
         </div>
       </div>
     </article>
   </template>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Листинг кухонь на заказ",
+      "description": "Каталог мини-карточек кухонь на заказ с изображениями, ценами и вариантами материалов.",
+      "inLanguage": "ru-RU"
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

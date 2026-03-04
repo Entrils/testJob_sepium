@@ -4,7 +4,7 @@
 }
 
 .page__header {
-  padding: 28px 0 20px;
+  padding: 1.75rem 0 1.25rem;
 }
 
 .page__title {
@@ -15,17 +15,17 @@
 }
 
 .page__content {
-  padding-top: 100px;
-  padding-bottom: 56px;
+  padding-top: 6.25rem;
+  padding-bottom: 3.5rem;
 }
 
 @media (min-width: 768px) {
   .page__container {
-    width: min(100% - (var(--container-padding) * 2), 1036px);
+    width: min(100% - (var(--container-padding) * 2), 64.75rem);
   }
 
   .page__header {
-    padding: 42px 0 24px;
+    padding: 2.625rem 0 1.5rem;
   }
 
   .page__title {
@@ -36,10 +36,11 @@
 @media (max-width: 767.98px) {
   :root {
     --container-padding: 12px;
+    --container-padding: 0.75rem;
   }
 
   .page__header {
-    padding: 20px 0 16px;
+    padding: 1.25rem 0 1rem;
   }
 
   .page__title {
@@ -47,7 +48,7 @@
   }
 
   .page__content {
-    padding-top: 24px;
-    padding-bottom: 28px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.75rem;
   }
 }

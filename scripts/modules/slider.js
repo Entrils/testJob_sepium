@@ -75,9 +75,13 @@
   function bindFancybox() {
     Fancybox.bind('[data-fancybox]', {
       Images: {
-        initialSize: 'fit'
+        initialSize: 'fit',
+        Panzoom: {
+          maxScale: 1
+        }
       },
       Thumbs: false,
+      animated: false,
       Toolbar: {
         display: {
           left: [],
@@ -89,26 +93,26 @@
   }
 
   function openGalleryFromSlider(sliderNode) {
+    const swiperInstance = sliderNode.catalogSwiper;
     const activeSlide = sliderNode.querySelector('.swiper-slide-active .product-card__zoom-link');
     const fallbackSlide = sliderNode.querySelector('.product-card__zoom-link');
     const currentLink = activeSlide || fallbackSlide;
+    const slides = buildSlidesForFancybox(sliderNode);
 
-    if (!currentLink) {
+    if (!currentLink || !slides.length) {
       return;
     }
 
-    Fancybox.show([
-      {
-        src: currentLink.getAttribute('href'),
-        type: 'image',
-        caption: currentLink.dataset.caption || ''
-      }
-    ], {
-      mainClass: 'product-zoom-fancybox',
+    Fancybox.show(slides, {
+      startIndex: getInitialSlideIndex(swiperInstance),
       Images: {
-        initialSize: 'fit'
+        initialSize: 'fit',
+        Panzoom: {
+          maxScale: 1
+        }
       },
       Thumbs: false,
+      animated: false,
       Toolbar: {
         display: {
           left: [],
