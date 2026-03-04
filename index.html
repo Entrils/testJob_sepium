@@ -17,11 +17,6 @@
 </head>
 <body>
   <div class="page">
-    <header class="page__header">
-      <div class="page__container">
-        <h1 class="page__title">Каталог кухонь</h1>
-      </div>
-    </header>
 
     <main class="page__content">
       <div class="page__container">
@@ -37,23 +32,23 @@
     <article class="product-card">
       <a class="product-card__main-link" href="/card" target="_blank" rel="noopener noreferrer" aria-label="Открыть карточку товара"></a>
 
-      <div class="product-card__media">
+            <div class="product-card__media">
         <div class="product-card__slider swiper">
           <div class="product-card__slider-wrapper swiper-wrapper"></div>
 
           <button class="product-card__nav-button product-card__nav-button_type_prev" type="button" aria-label="Предыдущий слайд">
-            <span class="product-card__nav-icon" aria-hidden="true">&lsaquo;</span>
+            <span class="product-card__nav-icon" aria-hidden="true"></span>
           </button>
 
           <button class="product-card__nav-button product-card__nav-button_type_next" type="button" aria-label="Следующий слайд">
-            <span class="product-card__nav-icon" aria-hidden="true">&rsaquo;</span>
+            <span class="product-card__nav-icon" aria-hidden="true"></span>
           </button>
 
-          <button class="product-card__zoom-button" type="button" aria-label="Увеличить изображение">
-            <span class="product-card__zoom-icon" aria-hidden="true">+</span>
+                    <button class="product-card__zoom-button" type="button" aria-label="Увеличить изображение">
+            <span class="product-card__zoom-icon" aria-hidden="true">
+              <img class="product-card__zoom-image" src="./assets/zoom.svg" alt="">
+            </span>
           </button>
-
-          <div class="product-card__pagination swiper-pagination" aria-label="Пагинация слайдера"></div>
         </div>
 
         <div class="product-card__description">
@@ -61,41 +56,49 @@
         </div>
       </div>
 
-      <div class="product-card__body">
-        <p class="product-card__article">
-          <span class="product-card__article-label">Артикул</span>
-          <span class="product-card__article-value"></span>
-        </p>
+      <div class="product-card__content">
+        <div class="product-card__pagination swiper-pagination" aria-label="Пагинация слайдера"></div>
 
-        <h3 class="product-card__title"></h3>
-
-        <div class="product-card__options">
-          <p class="product-card__options-title">Варианты материалов</p>
-          <div class="product-card__options-list" role="list" aria-label="Варианты материалов"></div>
-        </div>
-
-        <div class="product-card__price-block">
-          <p class="product-card__price-label">Цена от</p>
-          <p class="product-card__price-value"></p>
-          <p class="product-card__price-note">
-            <span class="product-card__price-note-label">Погонный метр от</span>
-            <span class="product-card__price-note-value"></span>
+        <div class="product-card__body">
+          <p class="product-card__article">
+            <span class="product-card__article-label">Артикул</span>
+            <span class="product-card__article-separator" aria-hidden="true">—</span>
+            <span class="product-card__article-value"></span>
           </p>
+
+          <h3 class="product-card__title"></h3>
+
+          <div class="product-card__options">
+            <p class="product-card__options-title">Варианты материалов</p>
+            <div class="product-card__options-list" role="list" aria-label="Варианты материалов"></div>
+          </div>
+
+          <div class="product-card__price-row">
+            <div class="product-card__price-block">
+              <p class="product-card__price-label">Цена от</p>
+              <p class="product-card__price-value"></p>
+              <p class="product-card__price-note">
+                <span class="product-card__price-note-label">Погонный метр от</span>
+                <span class="product-card__price-note-separator" aria-hidden="true">&nbsp;—&nbsp;</span>
+                <span class="product-card__price-note-value"></span>
+              </p>
+            </div>
+
+            <button class="product-card__buy-button" type="button">Заказать</button>
+          </div>
         </div>
-      </div>
 
-      <div class="product-card__footer">
-        <button class="product-card__like-button" type="button" aria-pressed="false" aria-label="Добавить в избранное">
-          <span class="product-card__like-icon" aria-hidden="true">&#9829;</span>
-          <span class="product-card__like-count"></span>
-        </button>
+        <div class="product-card__footer">
+            <button class="product-card__like-button" type="button" aria-pressed="false" aria-label="Добавить в избранное">
+              <span class="product-card__like-icon" aria-hidden="true"></span>
+              <span class="product-card__like-count"></span>
+            </button>
 
-        <a class="product-card__calc-link" href="/calc" target="_blank" rel="noopener noreferrer">
-          <span>Рассчитать стоимость</span>
-          <span class="product-card__calc-arrow" aria-hidden="true">&rsaquo;</span>
-        </a>
-
-        <button class="product-card__buy-button" type="button">Заказать</button>
+            <a class="product-card__calc-link" href="/calc" target="_blank" rel="noopener noreferrer">
+              <span>Рассчитать стоимость</span>
+              <span class="product-card__calc-arrow" aria-hidden="true"></span>
+            </a>
+        </div>
       </div>
     </article>
   </template>
@@ -111,3 +114,13 @@
   <script src="./scripts/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

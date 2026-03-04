@@ -27,6 +27,18 @@
       {
         src: './assets/kitchen.png',
         alt: 'Светлая кухня, вид 3'
+      },
+      {
+        src: './assets/kitchen.png',
+        alt: 'Светлая кухня, вид 4'
+      },
+      {
+        src: './assets/kitchen.png',
+        alt: 'Светлая кухня, вид 5'
+      },
+      {
+        src: './assets/kitchen.png',
+        alt: 'Светлая кухня, вид 6'
       }
     ]
   };

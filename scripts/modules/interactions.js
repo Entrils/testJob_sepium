@@ -50,11 +50,12 @@
 
   function handleZoomClick(button) {
     const sliderNode = button.closest('.product-card__slider');
-    const activeSlideLink = sliderNode.querySelector('.swiper-slide-active .product-card__zoom-link');
 
-    if (activeSlideLink) {
-      activeSlideLink.click();
+    if (!sliderNode) {
+      return;
     }
+
+    window.CatalogApp.slider.openGalleryFromSlider(sliderNode);
   }
 
   function bindCardEvents(catalogNode, products) {

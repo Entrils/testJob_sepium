@@ -15,10 +15,15 @@
 }
 
 .page__content {
+  padding-top: 100px;
   padding-bottom: 56px;
 }
 
 @media (min-width: 768px) {
+  .page__container {
+    width: min(100% - (var(--container-padding) * 2), 1036px);
+  }
+
   .page__header {
     padding: 42px 0 24px;
   }
@@ -42,6 +47,7 @@
   }
 
   .page__content {
+    padding-top: 24px;
     padding-bottom: 28px;
   }
 }
